@@ -30,3 +30,12 @@ class Bs4Filter:
         :return:
         """
         return tag.has_attr('data-click-name') and tag.has_attr('href')
+
+    @staticmethod
+    def shop_id_filter(tag):
+        """
+        bs4过滤器(shopID过滤器)
+        :param tag:
+        :return:
+        """
+        return tag.has_attr('data-shopid') and tag.has_attr('href') and tag.has_attr('title')
